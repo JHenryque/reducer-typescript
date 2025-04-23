@@ -52,8 +52,6 @@ export default function AppReduce() {
     if (credentials.text && credentials.title) {
       dispatch({ type: "ADD", payload: newTodo });
       setCredentials({ email: "", password: "" });
-      credentials.text = "";
-      credentials.title = "";
     }
   };
 
