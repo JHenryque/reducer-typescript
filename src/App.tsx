@@ -44,10 +44,8 @@ function stateReducer(state: State[], action: CounterAction): State[] {
 export default function App() {
   const [state, dispatch] = useReducer(stateReducer, initialState);
 
-  const form = new FormData(e.currentTarget);
-  console.log(form);
-
   const addFive = () => {
+    const form = new FormData(e.currentTarget);
     const id = state.id === 0 ? 1 : state.id + 1;
     const name = form.get("name") as string;
     const idade = form.get("idade") as string;
